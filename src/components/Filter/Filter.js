@@ -24,7 +24,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onChange: e => dispatch(phoneBookActions.changeFilter(e.target.value)),
+  onChange: e => {
+    console.log(e.target.value);
+    return dispatch(phoneBookActions.changeFilter(e.target.value));
+  },
 });
 
 Filter.propTypes = {

@@ -15,19 +15,19 @@ class ContactForm extends Component {
     evt.preventDefault();
     console.log(this.state);
     console.log(evt);
-    // this.props.onAddContact(this.state);
     this.validateData();
-
     this.reset();
   };
 
   validateData = () => {
     const { name, number } = this.state;
     const { contacts } = this.props;
+
     const normalizedFilter = name.toLowerCase();
     const msg = contacts.find(
       contact => contact.name.toLowerCase() === normalizedFilter,
     );
+    console.log(msg);
 
     if (!name || !number) {
       alert('Введите правильное имя и телефон');
@@ -39,6 +39,7 @@ class ContactForm extends Component {
       return;
     } else {
       this.props.onAddContact(this.state);
+      // console.log(this.props.contacts);
     }
   };
 
@@ -97,7 +98,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onAddContact: data => dispatch(phoneBookActions.onAddContact(data)),
+  onAddContact: data => dispatch(phoneBookActions.addContact(data)),
 });
 
 ContactForm.propTypes = {

@@ -1,6 +1,6 @@
-const ADD = 'phoneBook/Add';
-const DELETE = 'phoneBook/Delete';
-const CHANGE_FILTER = 'phoneBook/ChangeFilter';
+// const ADD = 'phoneBook/Add';
+// const DELETE = 'phoneBook/Delete';
+// const CHANGE_FILTER = 'phoneBook/ChangeFilter';
 
 export default {
   ADD: 'phoneBook/Add',

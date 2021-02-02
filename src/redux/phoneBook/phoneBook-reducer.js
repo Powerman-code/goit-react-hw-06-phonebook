@@ -35,10 +35,9 @@ const items = (state = defaultItems, { type, payload }) => {
 const filter = (state = '', { type, payload }) => {
   switch (type) {
     case types.CHANGE_FILTER:
+      console.log(payload);
       return payload;
 
-    // case types.DELETE:
-    //   return state.filter(({ id }) => id !== payload);
     default:
       return state;
   }
