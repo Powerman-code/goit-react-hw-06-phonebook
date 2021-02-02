@@ -1,12 +1,9 @@
-// const { Component } = require('react');
 import { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import s from './App.module.css';
 import ContactForm from './components/ContactForm/ContactForm';
 import Filter from './components/Filter/Filter';
 import ContactList from './components/ContactList/ContactList';
-// import { string } from 'prop-types';
 
 export default class App extends Component {
   // state = {

@@ -57,8 +57,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 ContactList.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  onGetVisibleContacts: PropTypes.func.isRequired,
+  contacts: PropTypes.array.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList);
